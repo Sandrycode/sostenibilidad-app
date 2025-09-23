@@ -65,7 +65,7 @@ Este proyecto está preparado para producción con configuración optimizada par
 
 ## 🖥️ Demo del Proyecto
 
-
+⚠️ Este proyecto está en fase de despliegue. Pronto estará disponible la demo funcional.
 
 ---
 
