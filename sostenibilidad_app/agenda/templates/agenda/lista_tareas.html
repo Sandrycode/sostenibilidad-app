@@ -1,0 +1,92 @@
+{% extends 'agenda/base.html' %}
+
+{% block title %}📋 Lista de Tareas{% endblock %}
+
+{% block extra_styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'agenda/estilos.css' %}">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endblock %}
+
+{% block content %}
+  <h1>📋 Lista de Tareas</h1>
+  <button id="modoOscuroToggle">🌙 Modo oscuro</button>
+
+  <p><a href="{% url 'agregar_tarea' %}">➕ Agregar nueva tarea</a></p>
+
+  <p>
+    <a href="{% url 'lista_tareas' %}">📋 Todas</a> |
+    <a href="{% url 'lista_tareas' %}?estado=pendientes">⏳ Pendientes</a> |
+    <a href="{% url 'lista_tareas' %}?estado=completadas">✅ Completadas</a>
+  </p>
+
+  <ul>
+    {% for tarea in tareas %}
+    <li class="tarea {% if tarea.completada %}completada{% endif %} {% if tarea.prioridad == 'urgente' %}urgente{% endif %}">
+      <strong>{{ tarea.descripcion }}</strong><br />
+      Fecha: {{ tarea.fecha }}<br />
+      Prioridad: {{ tarea.prioridad }}<br />
+      <span class="estado {% if tarea.completada %}completada{% else %}pendiente{% endif %}">
+        {% if tarea.completada %}Completada{% else %}Pendiente{% endif %}
+      </span><br />
+      <a href="{% url 'editar_tarea' tarea.id %}">✏️ Editar</a>
+      <a href="{% url 'eliminar_tarea' tarea.id %}">🗑️ Eliminar</a>
+    </li>
+    <hr />
+    {% empty %}
+    <li>No hay tareas registradas.</li>
+    {% endfor %}
+  </ul>
+
+  <script>
+    const botonModo = document.getElementById('modoOscuroToggle');
+
+    function actualizarTextoBoton() {
+      botonModo.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Modo claro'
+        : '🌙 Modo oscuro';
+    }
+
+    if (localStorage.getItem('modoOscuro') === 'activado') {
+      document.body.classList.add('dark-mode');
+    }
+
+    actualizarTextoBoton();
+
+    botonModo.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem(
+        'modoOscuro',
+        document.body.classList.contains('dark-mode') ? 'activado' : 'desactivado'
+      );
+      actualizarTextoBoton();
+    });
+  </script>
+
+  {% if messages %}
+    {% for message in messages %}
+      <script id="mensaje-{{ forloop.counter }}" type="application/json">
+        {
+          "icon": "success",
+          "title": "{{ message|escapejs }}"
+        }
+      </script>
+    {% endfor %}
+
+    <script>
+      document.querySelectorAll('script[type="application/json"]').forEach((script) => {
+        const msg = JSON.parse(script.textContent);
+        const esModoOscuro = document.body.classList.contains('dark-mode');
+
+        Swal.fire({
+          icon: msg.icon,
+          title: msg.title,
+          background: esModoOscuro ? '#2c2c2c' : '#fff',
+          color: esModoOscuro ? '#f0f0f0' : '#333',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      });
+    </script>
+  {% endif %}
+{% endblock %}

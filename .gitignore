@@ -1,0 +1,11 @@
+# Ignorar entorno virtual
+env/
+
+# Ignorar archivo de notas específico
+notas.txt
+
+# Ignorar archivos temporales y compilados
+*.log
+__pycache__/
+*.pyc
+

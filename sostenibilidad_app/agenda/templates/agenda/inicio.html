@@ -1,0 +1,112 @@
+{% extends 'agenda/base.html' %}
+{% with ocultar_menu=True %}
+
+{% block title %}🌱 Bienvenidos{% endblock %}
+
+{% block extra_styles %}
+{% load static %}
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("{% static 'agenda/proyecto_python.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  @keyframes girarSuave {
+    from {
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+  0% {
+    
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  }
+  50% {
+   
+    text-shadow: 0 0 25px rgba(0, 255, 255, 1);
+  }
+  100% {
+    
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  }
+}
+
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5),
+      0 0 10px rgba(0, 255, 255, 0.4), 4px 4px 10px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+  }
+
+  .botones {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .botones a {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .botones a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+
+  .icono-planeta {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 10px;
+    animation: girarSuave 3s ease-out;
+    filter: drop-shadow(0 0 6px #00ffff);
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+  <h1>
+    <span class="icono-planeta">🌍</span>Dos Apps, Una Misión: Mejorar Tu Mundo
+  </h1>
+  <div class="botones">
+    <a href="{% url 'registro' %}?next=/agenda/tareas/">📝 Mis tareas</a>
+    <a href="{% url 'registro' %}?next=/diagnostico/formulario/">🌱 Sostenibilidad</a>
+  </div>
+{% endblock %}
+
+{% endwith %}
+</body>
+</html>
+

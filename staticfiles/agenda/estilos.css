@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+a {
+    text-decoration: none;
+    color: #2980b9;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.tarea {
+    background-color: #fff;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tarea.completada {
+    border-left-color: #2ecc71;
+    opacity: 0.7;
+}
+
+.tarea.urgente {
+    border-left-color: #e74c3c;
+}
+
+.estado {
+    font-weight: bold;
+}
+
+.estado.pendiente::before {
+    content: "⏳ ";
+    color: #e67e22;
+}
+
+.estado.completada::before {
+    content: "✅ ";
+    color: #2ecc71;
+}
+
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+a.cancelar {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+    padding: 8px 12px;
+    text-decoration: none;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+a.cancelar:hover {
+    background-color: #95a5a6;
+}
+
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+
+.dark-mode a {
+    color: #9ecbff;
+}
+
+.dark-mode .formulario {
+    background-color: #2c2c2c;
+    border-left: 5px solid #9ecbff;
+}
+
+.dark-mode .tarea {
+    background-color: #2c2c2c;
+    border-color: #9ecbff;
+}
+
+.dark-mode button {
+    background-color: #444;
+    color: #fff;
+}
+
+#modoOscuroToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Estilo para h1 en modo oscuro */
+body.dark-mode h1 {
+    color: #f0f0f0;
+}
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode label {
+    color: #e0e0e0;
+}
+
+body.dark-mode a.cancelar {
+  background-color: #4a90e2 !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+}
+
+body.dark-mode a.cancelar:hover {
+  background-color: #357ab8 !important;
+  color: #ffffff !important;
+}
+
+
+
+
+
+

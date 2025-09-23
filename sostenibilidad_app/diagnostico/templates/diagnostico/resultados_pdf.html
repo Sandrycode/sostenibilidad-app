@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Informe Técnico de Sostenibilidad</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      padding: 40px;
+    }
+    .informe {
+      max-width: 700px;
+      margin: auto;
+    }
+    h2 {
+      color: #00bfa5;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h3 {
+      color: #00796b;
+      margin-top: 20px;
+    }
+    .bloque {
+      margin-bottom: 20px;
+    }
+    .observaciones {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="informe">
+    <h2>📋 Informe Técnico de Sostenibilidad</h2>
+    <p><strong>Empresa:</strong> {{ diagnostico.nombre_empresa }}</p>
+    <p><strong>Sector:</strong> {{ diagnostico.sector }}</p>
+
+    {% for norma, datos in dictamen.items %}
+      <div class="bloque">
+        <h3>{{ norma }}</h3>
+        <p><strong>Puntaje:</strong> {{ datos.puntaje }}</p>
+        <p><strong>Nivel:</strong> {{ datos.nivel }}</p>
+        <p><strong>Recomendación:</strong> {{ datos.recomendacion }}</p>
+      </div>
+    {% endfor %}
+
+    {% if diagnostico.observaciones %}
+      <div class="observaciones">
+        <h3>📝 Observaciones adicionales</h3>
+        <p>{{ diagnostico.observaciones }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
