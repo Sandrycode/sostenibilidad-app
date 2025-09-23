@@ -14,16 +14,16 @@ Este proyecto combina diseño limpio, navegación intuitiva y funcionalidades ro
 ## 👤 Funcionalidades del proyecto
 
 🗓️ **Agenda de Tareas**  
-- Registro e inicio de sesión seguro  
-- Añadir nuevas tareas personales  
-- Editar tareas existentes  
-- Eliminar tareas completadas o innecesarias  
+- Registro e inicio de sesión seguro.
+- Añadir nuevas tareas personales.
+- Editar tareas existentes.
+- Eliminar tareas completadas o innecesarias.  
 
 🌿 **Diagnóstico de Sostenibilidad**  
-- Registro e inicio de sesión seguro  
-- Evaluación personalizada de prácticas sostenibles para empresas mediante un cuestionario estructurado  
-- Visualización de resultados y recomendaciones  
-- Generación de informes en PDF  
+- Registro e inicio de sesión seguro.
+- Evaluación personalizada de prácticas sostenibles para empresas mediante un cuestionario estructurado.
+- Visualización de resultados y recomendaciones.
+- Generación de informes en PDF.
 
 ---
 
