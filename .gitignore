@@ -9,3 +9,9 @@ notas.txt
 __pycache__/
 *.pyc
 
+# Ignorar base de datos local
+db.sqlite3
+
+# Ignorar carpeta generada automáticamente
+staticfiles/
+
