@@ -61,7 +61,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'sostenibilidad_app.urls'
+ROOT_URLCONF = 'sostenibilidad_app.sostenibilidad_app.urls'
 
 TEMPLATES = [
     {
