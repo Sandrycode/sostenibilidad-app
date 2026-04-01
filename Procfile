@@ -1,1 +1,2 @@
-web: gunicorn sostenibilidad_app.wsgi
+web: gunicorn sostenibilidad_app.sostenibilidad_app.wsgi
+
