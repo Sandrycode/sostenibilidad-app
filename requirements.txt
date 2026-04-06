@@ -4,4 +4,6 @@ whitenoise
 psycopg2-binary
 pillow
 dj-database-url
+reportlab
+
 
