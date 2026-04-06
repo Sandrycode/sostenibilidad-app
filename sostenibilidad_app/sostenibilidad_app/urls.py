@@ -37,7 +37,8 @@ urlpatterns = [
     path('', agenda_views.inicio, name='inicio'),  # Página de inicio
     path('home/', bienvenida, name='home'),
     path('admin/', admin.site.urls),
-    path('agenda/', include('agenda.urls')),  # App de tareas
-    path('diagnostico/', include('diagnostico.urls')),  # App de sostenibilidad
+    path('agenda/', include('sostenibilidad_app.agenda.urls')),  # App de tareas
+    path('diagnostico/', include('sostenibilidad_app.diagnostico.urls')),  # App de sostenibilidad
+
 ]
 
