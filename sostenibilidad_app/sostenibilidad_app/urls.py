@@ -26,7 +26,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import render
 from sostenibilidad_app.agenda import views as agenda_views
-from diagnostico.views import bienvenida
+from sostenibilidad_app.diagnostico.views import bienvenida
+
 
 # Vista principal
 def index(request):
