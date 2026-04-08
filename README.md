@@ -7,7 +7,7 @@ Hoy te presento **Sostenibilidad App**, una aplicación web desarrollada con Dja
 - **Agenda de Tareas**: una herramienta práctica para añadir, editar y eliminar tareas personales, pensada para fomentar la organización y el seguimiento de hábitos sostenibles.
 - **Diagnóstico de Sostenibilidad**: un sistema interactivo que permite a los usuarios evaluar sus prácticas cotidianas, recibir recomendaciones personalizadas y generar informes en PDF.
 
-Este proyecto combina diseño limpio, navegación intuitiva y funcionalidades robustas para brindar valor real tanto a usuarios como a empresas comprometidas con la sostenibilidad. Cada módulo está diseñado para promover la conciencia ambiental, la acción responsable y la gestión eficiente de la información.
+Este proyecto combina diseño limpio, navegación intuitiva y funcionalidades robustas para brindar valor real tanto a usuarios como a empresas comprometidas con la sostenibilidad. Cada módulo está diseñado para promover la conciencia ambiental, la acción responsable y la gestión eficiente de la información. 
 
 ---
 
