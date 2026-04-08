@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: sostenibilidad-app-test
+    name: sostenibilidad-app
     env: python
     rootDir: sostenibilidad_app
     buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
