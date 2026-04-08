@@ -2,7 +2,7 @@ services:
   - type: web
     name: sostenibilidad-app
     env: python
-    rootDir: sostenibilidad_app
+    rootDir: .
     buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
     startCommand: "gunicorn sostenibilidad_app.wsgi:application"
     envVars:
