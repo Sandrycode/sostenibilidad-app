@@ -2,6 +2,7 @@ services:
   - type: web
     name: sostenibilidad-app
     env: python
+    rootDir: main
     buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
     startCommand: "gunicorn sostenibilidad_app.wsgi:application"
     envVars:
@@ -10,4 +11,5 @@ services:
           name: sostenibilidad-db
           property: connectionString
     postDeployCommand: "python manage.py migrate"
+
 
