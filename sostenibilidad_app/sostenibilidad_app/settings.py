@@ -144,16 +144,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
+
 STATIC_URL = 'static/'
+
 import os
 
- # STATICFILES_DIRS = [
-     # BASE_DIR / "sostenibilidad_app" / "agenda" / "static",
- # ]
+# Carpeta donde Django copiará TODOS los estáticos cuando se ejecute collectstatic
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Carpeta donde tú tienes tus archivos estáticos dentro de la app "agenda"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'agenda/static')
 ]
+
 
 
 # Default primary key field type
