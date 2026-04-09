@@ -25,8 +25,8 @@ Agregamos las rutas para /agenda/ y /diagnostico/, que usaremos más adelante.
 from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import render
-from sostenibilidad_app.agenda import views as agenda_views
-from sostenibilidad_app.diagnostico.views import bienvenida
+from agenda import views as agenda_views
+from diagnostico.views import bienvenida
 
 
 # Vista principal
@@ -37,8 +37,9 @@ urlpatterns = [
     path('', agenda_views.inicio, name='inicio'),  # Página de inicio
     path('home/', bienvenida, name='home'),
     path('admin/', admin.site.urls),
-    path('agenda/', include('sostenibilidad_app.agenda.urls')),  # App de tareas
-    path('diagnostico/', include('sostenibilidad_app.diagnostico.urls')),  # App de sostenibilidad
+    path('agenda/', include('agenda.urls')),  # app de tareas
+    path('diagnostico/', include('diagnostico.urls')),  # app de sostenibilidad
+
 
 ]
 
