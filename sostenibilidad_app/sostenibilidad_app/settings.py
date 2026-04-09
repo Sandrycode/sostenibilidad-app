@@ -147,6 +147,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 import os
 
+STATICFILES_DIRS = [
+    BASE_DIR / "sostenibilidad_app" / "agenda" / "static",
+]
+
 # STATICFILES_DIRS = [
   #  os.path.join(BASE_DIR, 'agenda/static')
 # ]
