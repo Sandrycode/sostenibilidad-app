@@ -4,9 +4,6 @@ from .views import exportar_pdf
 from .views import exportar_pdf_simple
 from django.contrib.auth import views as auth_views
 from . import views
-from sostenibilidad_app.diagnostico.views import home
-
-
 
 
 urlpatterns = [
