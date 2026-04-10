@@ -153,9 +153,11 @@ import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Carpeta donde tú tienes tus archivos estáticos dentro de la app "agenda"
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'agenda/static')
-]
+#STATICFILES_DIRS = [
+  #   os.path.join(BASE_DIR, 'agenda/static')
+#]
+
+STATICFILES_DIRS = []
 
 
 
