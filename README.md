@@ -65,7 +65,7 @@ Este proyecto está preparado para producción con configuración optimizada par
 
 ## 🖥️ Demo del Proyecto
 
-🔗 Ta disponible en: https://sostenibilidad-app.onrender.com
+🔗 Ya disponible en: https://sostenibilidad-app.onrender.com
 
 ---
 
